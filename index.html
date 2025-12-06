@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sure-Step Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SIDEBAR NAV -->
+<nav>
+    <h2 class="brand">Sure-Step</h2>
+    <ul>
+        <li onclick="showPage('dashboard')" class="active">Dashboard</li>
+        <li onclick="showPage('patient-profile')">Patient Profiles</li>
+        <li onclick="showPage('patient-template')">Templates</li>
+        <li onclick="showPage('community')">Community</li>
+        <li onclick="showPage('consent')">Consent</li>
+        <li onclick="showPage('settings')">Settings</li>
+    </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="page active">
+    <h1>Dashboard Overview</h1>
+
+    <div class="panel">
+        <h3>Alerts & Reminders</h3>
+        <div class="metric-row"><span>Tasks Due</span><span>6</span></div>
+        <div class="metric-row"><span>Upcoming Medications</span><span>3</span></div>
+        <div class="metric-row alert"><span>Late Documentation</span><span>1</span></div>
+    </div>
+
+    <div class="panel">
+        <h3>Patient Profiles</h3>
+
+        <div class="patient-list">
+            <div class="patient-list-item clickable" onclick="showPage('patient-profile')">
+                John Martinez — Diabetes
+            </div>
+
+            <div class="patient-list-item disabled">
+                Sarah P. — Alzheimer’s (future profile)
+            </div>
+
+            <div class="patient-list-item disabled">
+                Harold L. — Heart failure (future profile)
+            </div>
+
+            <div class="patient-list-item disabled">
+                Available Slot — Add new patient
+            </div>
+        </div>
+    </div>
+
+    <div class="panel premium">
+        <h3>Smart Assist (Premium)</h3>
+        <p>⚡ Generates insights and prompts to support caregiving — not medical advice.</p>
+    </div>
+</section>
+
+<!-- PATIENT PROFILE -->
+<section id="patient-profile" class="page">
+    <h1>Patient Profile Example</h1>
+
+    <div class="profile-grid" id="active-patient">
+
+        <div class="panel patient-card">
+            <img src="https://images.pexels.com/photos/1139743/pexels-photo-1139743.jpeg?auto=compress&cs=tinysrgb&w=600">
+            <strong>John Martinez, 72</strong>
+            <p>Type 2 Diabetes • Home Care Patient</p>
+        </div>
+
+        <div class="panel patient-card">
+            <strong>Key Metrics</strong>
+            <p>AM Glucose: 145 mg/dL</p>
+            <p>A1C: 7.8%</p>
+            <p>BP: 132/76</p>
+            <p>Weight: 198 lbs</p>
+        </div>
+
+        <div class="panel patient-card">
+            <strong>Medication & Insulin Schedule</strong>
+            <p>Metformin 500mg — Morning & Evening</p>
+            <p>Lisinopril 10mg — Morning</p>
+            <p>Aspirin 81mg — Morning</p>
+            <hr>
+            <p><strong>Insulin Tracking:</strong></p>
+            <p>Basal: 18 units — bedtime</p>
+            <p>Bolus: 6 units — with dinner</p>
+            <p>Last recorded dose: 6 units at 6:15 PM</p>
+        </div>
+
+        <div class="panel patient-card">
+            <strong>Daily Notes</strong>
+            <p>6:45 AM — Mild tremor, glucose slightly high.</p>
+            <p>8:20 PM — Walk tolerated well after bolus dose.</p>
+        </div>
+
+        <div class="panel patient-card premium">
+            <strong>Care Q&A Assist (Premium)</strong>
+            <p><b>Q:</b> “John forgets insulin at dinner — how can I help without nagging?”</p>
+            <p><b>A:</b> “Link the dose to routine actions:
+                After meals → insulin time.  
+                Add a visual cue, like a note near plates.”</p>
+            <p style="font-size:11px">Care strategy support — NOT medical instruction.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TEMPLATE LIBRARY -->
+<section id="patient-template" class="page">
+    <h1>Care Templates</h1>
+
+    <div class="panel clickable" onclick="openTemplate('diabetes')">
+        Diabetes Care Template
+    </div>
+    <div class="panel clickable" onclick="openTemplate('alzheimers')">
+        Alzheimer’s Care Template
+    </div>
+    <div class="panel clickable" onclick="openTemplate('heart')">
+        Heart Care Template
+    </div>
+    <div class="panel clickable" onclick="openTemplate('cancer')">
+        Cancer Care Template
+    </div>
+    <div class="panel clickable" onclick="openTemplate('pain')">
+        Chronic Pain Template
+    </div>
+
+    <button class="primary-btn" onclick="showPage('custom-builder')">Create Custom Template</button>
+</section>
+
+<!-- TEMPLATE PREVIEW -->
+<section id="template-preview" class="page">
+    <h1>Template Structure</h1>
+    <div id="preview-fields"></div>
+</section>
+
+<!-- TEMPLATE BUILDER -->
+<section id="custom-builder" class="page">
+    <h1>Custom Builder</h1>
+
+    <div class="panel">
+        <h3>Add Components</h3>
+        <div class="list-item">Log Metric</div>
+        <div class="list-item">Symptom Entry</div>
+        <div class="list-item">Medication Record</div>
+        <div class="list-item">Insulin Tracking Block</div>
+        <div class="list-item">Behavior Note</div>
+        <div class="list-item">Checklist Block</div>
+    </div>
+
+    <div class="panel premium">
+        <h3>Smart Assist (Premium)</h3>
+        <p>⚡ Suggests additional components — not medical advice.</p>
+    </div>
+</section>
+
+<!-- COMMUNITY PAGE -->
+<section id="community" class="page">
+    <h1>Community Hub</h1>
+
+    <div class="panel">
+        <h3>Discussion Board (Example)</h3>
+        <p><strong>Megan R., CNA:</strong></p>
+        <p>“My resident’s birthday is coming up — what meaningful activities can I do for elderly or disabled clients?”</p>
+        <p><em>Replies:</em></p>
+        <ul style="font-size:14px; margin-top:0;">
+            <li>Scrapbook or photo board they can hold and look at</li>
+            <li>Soft treats or diet-friendly dessert alternatives</li>
+            <li>Music from their era — sing-along session</li>
+            <li>Mini celebration with signed card from residents/staff</li>
+            <li>Hand massage or aromatherapy if mobility is limited</li>
+        </ul>
+        <p style="font-size:11px">Peer ideas to support caregiving — not clinical advice.</p>
+    </div>
+
+    <div class="panel premium">
+        <h3>Smart Care Q&A (Premium Example)</h3>
+        <p><strong>Q:</strong> “I’m overwhelmed balancing documentation and care — what can I realistically do to help myself?”</p>
+        <p><strong>A:</strong> Break your workflow down:
+            <br>• Log one short note at the moment  
+            <br>• Expand it during quiet time  
+            <br>• Use templates so you only add updates  
+            <br>• Batch similar entries for speed  
+            <br><br>
+            Small cycles reduce stress and increase control.
+        </p>
+        <p style="font-size:11px">Workflow guidance — NOT clinical direction.</p>
+    </div>
+
+    <div class="panel premium clickable">
+        <h3>Shift Coverage Exchange (Premium)</h3>
+        <p>Offer or request shift coverage from verified caregivers.</p>
+        <p style="font-size:11px">Premium scheduling tool — not staffing authorization.</p>
+    </div>
+</section>
+
+<!-- CONSENT -->
+<section id="consent" class="page">
+    <h1>Consent & Sharing</h1>
+    <div class="panel clickable">Family Access</div>
+    <div class="panel clickable">Provider Access</div>
+    <div class="panel clickable">Role Permissions</div>
+</section>
+
+<!-- SETTINGS -->
+<section id="settings" class="page">
+    <h1>Settings</h1>
+    <div class="panel clickable">Notifications</div>
+    <div class="panel clickable">Account Type</div>
+    <div class="panel premium clickable">Azure Smart Assist Enabled</div>
+</section>
+
+</main>
+
+<!-- BOTTOM NAV -->
+<footer id="mobile-nav">
+    <button onclick="showPage('dashboard')">Home</button>
+    <button onclick="showPage('patient-template')">Templates</button>
+    <button onclick="showPage('patient-profile')">Profile</button>
+    <button onclick="showPage('community')">Community</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
