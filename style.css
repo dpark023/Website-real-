@@ -5,9 +5,9 @@ body {
     background: #f8fbfe;
 }
 
-/* SIDEBAR */
+/* SIDEBAR fixed full height */
 nav {
-    width: 187px; 
+    width: 175px;
     background: linear-gradient(#d4e9f4, #a8c7d8);
     position: fixed;
     top: 0;
@@ -15,8 +15,6 @@ nav {
     bottom: 0;
     padding: 20px;
     box-shadow: 2px 0 6px rgba(0,0,0,0.08);
-    display: flex;
-    flex-direction: column;
 }
 
 nav ul {
@@ -32,7 +30,7 @@ nav ul {
     margin-bottom: 20px;
 }
 
-/* NAV */
+/* NAV ITEMS */
 nav li {
     padding: 10px 0;
     cursor: pointer;
@@ -44,11 +42,11 @@ nav li.active {
     border-radius: 6px;
 }
 
-/* MAIN CONTENT SHIFTED OVER */
+/* MAIN CONTENT */
 main {
     flex: 1;
     padding: 20px;
-    margin-left: 220px;
+    margin-left: 200px;
     overflow-y: auto;
 }
 
@@ -66,6 +64,11 @@ main {
 .clickable:hover { background: #eef7ff; cursor: pointer; }
 .disabled { opacity: 0.6; }
 
+/* PREMIUM = gold bar */
+.premium {
+    border-left: 4px solid gold;
+}
+
 /* PATIENT LIST */
 .patient-list {
     display: flex;
@@ -81,9 +84,6 @@ main {
     background: #dfefff;
 }
 
-/* PREMIUM */
-.premium { border-left: 4px solid gold; }
-
 /* PROFILE GRID */
 .profile-grid {
     display: grid;
@@ -96,7 +96,7 @@ main {
     border-radius: 6px;
 }
 
-/* METRIC + UI */
+/* METRICS */
 .metric-row {
     display: flex;
     justify-content: space-between;
@@ -105,11 +105,10 @@ main {
 }
 .alert { color: red; font-weight: bold; }
 
-/*  pencil indicator */
+/* Pencil hover indicator for editable fields */
 .editable {
     position: relative;
 }
-
 .editable:hover::after {
     content: "✏️";
     position: absolute;
@@ -119,12 +118,11 @@ main {
     opacity: 0.65;
 }
 
-
 /* FOOTER NAV */
 #mobile-nav {
     position: fixed;
     bottom: 0;
-    left: 220px;
+    left: 200px;
     right: 0;
     background: white;
     border-top: 1px solid #ccc;
