@@ -8,30 +8,31 @@ function openTemplate(type) {
 
     const logs = {
         diabetes: [
-            { title: "Glucose Log", example: "Time, value, context (e.g., 7:10 AM — 145 mg/dL fasting)" },
-            { title: "Insulin Dose Tracking", example: "Basal/Bolus, units, time, before/after meal" },
-            { title: "Carb Intake", example: "Meal carb amount (e.g., 45g breakfast)" },
-            { title: "High/Low Event Notes", example: "Symptoms, interventions, follow-up reading" }
+            { title: "Glucose Log", example: "Time, value, context (e.g., 145 mg/dL fasting)" },
+            { title: "Insulin Dose Tracking", example: "Basal/bolus, units, timing, relation to meals" },
+            { title: "Carb Intake", example: "45g breakfast; 60g dinner" },
+            { title: "High/Low Event Notes", example: "Symptoms, response, follow-up reading" }
         ],
         alzheimers: [
-            { title: "Behavior Notes", example: "Engaged — 10:20 AM" },
-            { title: "Prompting Record", example: "Memory exercise completed" },
-            { title: "Safety Tracking", example: "Exit attempt redirected" }
+            { title: "Behavior Notes", example: "Agitation at 2 PM, redirected" },
+            { title: "Prompting Record", example: "Memory exercise attempted" },
+            { title: "Safety Tracking", example: "Exit attempt near hallway — blocked" }
         ],
         heart: [
             { title: "Blood Pressure", example: "132/84 — 9:00 AM" },
             { title: "Weight Log", example: "167 lbs — stable" },
-            { title: "Symptoms", example: "Fatigue noted" }
+            { title: "Symptoms", example: "Fatigue mid-day" }
         ],
         cancer: [
             { title: "Chemo Notes", example: "Cycle 3 tolerated" },
             { title: "Side Effects", example: "Fatigue 7/10" },
-            { title: "Pain Notes", example: "2/10 relief w/ Tylenol" }
+            { title: "Pain Notes", example: "2/10, Tylenol effective" }
         ],
-        pain: [
-            { title: "Pain Scale", example: "6/10 — lower back" },
-            { title: "Trigger Notes", example: "Walking aggravated" },
-            { title: "Mobility", example: "Reduced range" }
+        arthritis: [
+            { title: "Pain Tracking", example: "Pain scale 6/10 — morning stiffness" },
+            { title: "Mobility & Range Notes", example: "Walking slower, reduced grip strength" },
+            { title: "Medication Record", example: "NSAID dose — AM" },
+            { title: "Heat/Exercise Response", example: "Warm compress helped; tolerated light stretch" }
         ]
     };
 
