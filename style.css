@@ -115,3 +115,27 @@ main {
     font-size: 15px;
     cursor: pointer;
 }
+
+/* EDIT BUTTON */
+.edit-btn {
+    background: #e6f2ff;
+    border: 1px solid #8bb7df;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 6px;
+}
+.edit-btn:hover {
+    background: #d1e9ff;
+}
+
+/* Editable feedback */
+[contenteditable="true"] {
+    border-bottom: 1px dashed #ccc;
+    padding: 2px;
+}
+[contenteditable="true"]:focus {
+    background: #fff6d9;
+    outline: none;
+}
