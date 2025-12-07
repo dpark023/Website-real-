@@ -68,83 +68,90 @@
         </div>
     </div>
 
-    <h2 style="margin-top:15px;">Active Example Profile</h2>
+    <h2 style="margin-top:15px;">Active Example Profile (Editable)</h2>
 
     <div class="profile-grid" id="active-patient">
 
         <div class="panel patient-card">
             <img src="https://images.pexels.com/photos/1139743/pexels-photo-1139743.jpeg?auto=compress&cs=tinysrgb&w=600">
-            <strong>John Martinez, 72</strong>
-            <p>Type 2 Diabetes • Home Care Patient</p>
+            <strong contenteditable="true">John Martinez, 72</strong>
+            <p contenteditable="true">Type 2 Diabetes • Home Care Patient</p>
         </div>
 
         <div class="panel patient-card">
             <strong>Key Metrics</strong>
-            <p>AM Glucose: 145 mg/dL</p>
-            <p>A1C: 7.8%</p>
-            <p>BP: 132/76</p>
-            <p>Weight: 198 lbs</p>
+            <p contenteditable="true">AM Glucose: 145 mg/dL</p>
+            <p contenteditable="true">A1C: 7.8%</p>
+            <p contenteditable="true">BP: 132/76</p>
+            <p contenteditable="true">Weight: 198 lbs</p>
+            <button class="edit-btn" onclick="saveEdits()">Save Changes</button>
         </div>
 
         <div class="panel patient-card">
             <strong>Medication & Insulin Schedule</strong>
-            <p>Metformin 500mg — Morning & Evening</p>
-            <p>Lisinopril 10mg — Morning</p>
-            <p>Aspirin 81mg — Morning</p>
+            <p contenteditable="true">Metformin 500mg — Morning & Evening</p>
+            <p contenteditable="true">Lisinopril 10mg — Morning</p>
+            <p contenteditable="true">Aspirin 81mg — Morning</p>
             <hr>
             <p><strong>Insulin Tracking:</strong></p>
-            <p>Basal: 18 units — bedtime</p>
-            <p>Bolus: 6 units — dinner</p>
-            <p>Last recorded dose: 6 units at 6:15 PM</p>
+            <p contenteditable="true">Basal: 18 units — bedtime</p>
+            <p contenteditable="true">Bolus: 6 units — dinner</p>
+            <p contenteditable="true">Last recorded dose: 6 units at 6:15 PM</p>
+            <button class="edit-btn" onclick="saveEdits()">Save Changes</button>
         </div>
 
         <div class="panel patient-card">
             <strong>Daily Notes</strong>
-            <p>6:45 AM — Mild tremor, glucose slightly high.</p>
-            <p>8:20 PM — Walk tolerated well after insulin.</p>
+            <textarea style="width:100%; height:90px;">6:45 AM — Mild tremor, glucose slightly high.
+8:20 PM — Walk tolerated well after insulin.</textarea>
+            <button class="edit-btn" onclick="saveEdits()">Save Notes</button>
         </div>
 
-        <!-- 🔥 NEW EXPANDED DIABETES-SPECIFIC CARDS ADDED -->
         <div class="panel patient-card">
             <strong>Carb Tracking</strong>
-            <p>Breakfast: 45g</p>
-            <p>Lunch: 58g</p>
-            <p>Dinner: 52g</p>
-            <p>Snacks: 18g</p>
+            <p contenteditable="true">Breakfast: 45g</p>
+            <p contenteditable="true">Lunch: 58g</p>
+            <p contenteditable="true">Dinner: 52g</p>
+            <p contenteditable="true">Snacks: 18g</p>
+            <button class="edit-btn" onclick="saveEdits()">Save Changes</button>
         </div>
 
         <div class="panel patient-card">
             <strong>Symptoms & Watch List</strong>
-            <p>Dizziness after lunch — resolved</p>
-            <p>Neuropathy sensitivity present</p>
-            <p>Sleep disruption 2 nights/week</p>
-            <p>Weekly foot check needed</p>
+            <p contenteditable="true">Dizziness after lunch — resolved</p>
+            <p contenteditable="true">Neuropathy sensitivity present</p>
+            <p contenteditable="true">Sleep disruption 2 nights/week</p>
+            <p contenteditable="true">Weekly foot check needed</p>
+            <button class="edit-btn" onclick="saveEdits()">Save Changes</button>
         </div>
 
         <div class="panel patient-card">
             <strong>Caregiver Reminders</strong>
-            <p>Monitor carbs vs insulin usage</p>
-            <p>Hydration support through day</p>
-            <p>Encourage slow, balanced meals</p>
-            <p>Report persistent tremor episodes</p>
+            <p contenteditable="true">Monitor carbs vs insulin usage</p>
+            <p contenteditable="true">Hydration support through day</p>
+            <p contenteditable="true">Encourage slow, balanced meals</p>
+            <p contenteditable="true">Report persistent tremor episodes</p>
+            <button class="edit-btn" onclick="saveEdits()">Save Changes</button>
         </div>
 
         <div class="panel patient-card">
             <strong>Scheduled Care & Follow-Up</strong>
-            <p>Eye exam — Jan 25</p>
-            <p>Endocrinology visit — Feb 10</p>
-            <p>Neuropathy review — March</p>
+            <p contenteditable="true">Eye exam — Jan 25</p>
+            <p contenteditable="true">Endocrinology visit — Feb 10</p>
+            <p contenteditable="true">Neuropathy review — March</p>
+            <button class="edit-btn" onclick="saveEdits()">Save Changes</button>
         </div>
 
-        <!-- Premium Q&A stays exactly as you had -->
         <div class="panel patient-card premium">
             <strong>Care Q&A Assist (Premium)</strong>
-            <p><b>Q:</b> “John forgets insulin at dinner — how can I help without nagging?”</p>
-            <p><b>A:</b> Tie insulin to a routine action:
+            <p contenteditable="true"><b>Q:</b> “John forgets insulin at dinner — how can I help without nagging?”</p>
+            <p contenteditable="true"><b>A:</b> Tie insulin to a routine action:
                 clear plates → insulin time.
                 Add a sticky reminder near dishes.</p>
             <p style="font-size:11px">Care guidance — NOT medical direction.</p>
+            <button class="edit-btn" onclick="saveEdits()">Update Q&A</button>
         </div>
+
     </div>
 </section>
 
