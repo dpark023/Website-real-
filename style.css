@@ -7,16 +7,32 @@ body {
 
 /* SIDEBAR */
 nav {
-    width: 220px;
+    width: 187px; 
     background: linear-gradient(#d4e9f4, #a8c7d8);
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
     padding: 20px;
     box-shadow: 2px 0 6px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
 }
+
 nav ul {
     list-style: none;
     padding: 0;
 }
+
+/* BRAND */
+.brand {
+    background: #bcd8e4;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* NAV */
 nav li {
     padding: 10px 0;
     cursor: pointer;
@@ -28,20 +44,14 @@ nav li.active {
     border-radius: 6px;
 }
 
-/* BRAND */
-.brand {
-    background: #bcd8e4;
-    padding: 10px;
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-/* CONTENT */
+/* MAIN CONTENT SHIFTED OVER */
 main {
     flex: 1;
     padding: 20px;
+    margin-left: 220px;
     overflow-y: auto;
 }
+
 .page { display: none; }
 .page.active { display: block; }
 
@@ -86,16 +96,29 @@ main {
     border-radius: 6px;
 }
 
-/* LISTED FIELDS */
-.metric-row,
-.log-row,
-.list-item {
+/* METRIC + UI */
+.metric-row {
     display: flex;
     justify-content: space-between;
     padding: 6px;
     border-bottom: 1px solid #eee;
 }
 .alert { color: red; font-weight: bold; }
+
+/*  pencil indicator */
+.editable {
+    position: relative;
+}
+
+.editable:hover::after {
+    content: "✏️";
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    font-size: 12px;
+    opacity: 0.65;
+}
+
 
 /* FOOTER NAV */
 #mobile-nav {
@@ -114,28 +137,4 @@ main {
     border: none;
     font-size: 15px;
     cursor: pointer;
-}
-
-/* EDIT BUTTON */
-.edit-btn {
-    background: #e6f2ff;
-    border: 1px solid #8bb7df;
-    padding: 6px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    cursor: pointer;
-    margin-top: 6px;
-}
-.edit-btn:hover {
-    background: #d1e9ff;
-}
-
-/* Editable feedback */
-[contenteditable="true"] {
-    border-bottom: 1px dashed #ccc;
-    padding: 2px;
-}
-[contenteditable="true"]:focus {
-    background: #fff6d9;
-    outline: none;
 }
