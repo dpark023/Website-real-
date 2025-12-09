@@ -64,7 +64,7 @@ main {
 .clickable:hover { background: #eef7ff; cursor: pointer; }
 .disabled { opacity: 0.6; }
 
-/* PREMIUM = gold bar */
+/* PREMIUM  */
 .premium {
     border-left: 4px solid gold;
 }
@@ -105,7 +105,7 @@ main {
 }
 .alert { color: red; font-weight: bold; }
 
-/* Pencil hover indicator for editable fields */
+/* EDITS */
 .editable {
     position: relative;
 }
