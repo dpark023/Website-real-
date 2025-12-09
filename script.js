@@ -129,7 +129,7 @@ const templateBlueprints = {
 
 
 /*
-grid
+GRIDS
 */
 
 function openTemplate(type) {
