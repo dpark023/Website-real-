@@ -9,9 +9,7 @@ function showPage(id) {
 }
 
 /*
-    THESE ARE REAL TEMPLATE BLUEPRINT VALUES
-    – they mirror your patient profile layout
-    – but are illness-specific
+  TEMPLATE BLUEPRINT VALUES
 */
 
 const templateBlueprints = {
@@ -144,9 +142,9 @@ function openTemplate(type) {
         <div class="profile-grid">
 
             <div class="panel patient-card">
-                <strong>Example Profile Title</strong>
+                <strong> Main Profile </strong>
                 <p class="editable">${type.charAt(0).toUpperCase()+ type.slice(1)} Care Template</p>
-                <p style="font-size:12px; opacity:0.7;">(This becomes your real patient profile)</p>
+                <p style="font-size:12px; opacity:0.7;">(This is where your patient's basic infomration lie)</p>
             </div>
 
             <div class="panel patient-card">
